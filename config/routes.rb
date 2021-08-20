@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'lists/new'
   get 'lists/show'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :lists, only: [ :create, :index, :new, :show ] do
+  resources :lists, only: [ :create, :index, :new, :show, :destroy ] do
     resources :bookmarks, only: [ :new, :create ]
 
   end
